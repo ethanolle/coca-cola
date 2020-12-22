@@ -1,9 +1,10 @@
 import "./App.css"
+import React, { useState } from "react"
 
 function App() {
-  const nextHandler = () => {
-    console.log("test")
-  }
+  const [transition, setTransition] = useState(false)
+  console.log(transition)
+
   return (
     <div className='generalContainer'>
       <img
@@ -14,15 +15,22 @@ function App() {
       <img
         src='images/products/Zero.png'
         alt='cocacola'
-        className='products  '
+        onAnimationEnd={() => {
+          setTransition("right")
+        }}
+        className={
+          transition === true ? "products slide-animation " : "products  "
+        }
       />
       <div className='square center-page '>
         <img
           src='images/Vector2.png'
           alt='next-button'
-          onClick={nextHandler}
-          className='next-button'
+          className='next-container'
         />
+        <h2 className='next-button' onClick={() => setTransition(true)}>
+          Next
+        </h2>
         <div className='square-content'>
           <h1>Zero Sugar</h1>
           <p>

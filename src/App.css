@@ -9,16 +9,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-@keyframes example {
-  from {
-    opacity: 100%;
-  }
-  to {
-    opacity: 10%;
-    left: 15%;
-  }
-}
-
 .products {
   position: fixed;
   top: 50%;
@@ -26,17 +16,47 @@ body {
   transform: translate(-50%, -50%);
   max-width: 15%;
   z-index: 3;
-  animation-name: example;
-  animation-duration: 2s;
-  animation-delay: 3s;
-  animation-fill-mode: backwards;
 }
 
-.next-button {
+@keyframes slide {
+  0% {
+    opacity: 100%;
+  }
+  49% {
+    opacity: 0%;
+    left: 0%;
+  }
+  50% {
+    opacity: 0%;
+    left: 100%;
+  }
+  100% {
+    opacity: 100%;
+    left: 50%;
+  }
+}
+
+.slide-animation {
+  animation: slide 1s;
+}
+
+.next-container {
   position: absolute;
   bottom: 0px;
   right: 0px;
   max-width: 30%;
+}
+
+.next-button {
+  font-family: SF Pro Text;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 100%;
+  color: white;
+}
+.next-button:hover {
+  cursor: pointer;
 }
 
 .coca-logo {
@@ -59,9 +79,10 @@ body {
 
 .square-content {
   position: absolute;
+  max-width: 100%;
   font-family: SF Pro Text;
   font-style: normal;
-  font-size: 100%;
+  font-size: 1.2vw;
   font-style: normal;
   bottom: 5%;
   left: 5%;
