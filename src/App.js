@@ -1,6 +1,9 @@
 import "./App.css"
 
 function App() {
+  const nextHandler = () => {
+    console.log("test")
+  }
   return (
     <div className='generalContainer'>
       <img
@@ -11,10 +14,16 @@ function App() {
       <img
         src='images/products/Zero.png'
         alt='cocacola'
-        className='products center-page '
+        className='products  '
       />
       <div className='square center-page '>
-        <div className='square-content   '>
+        <img
+          src='images/Vector2.png'
+          alt='next-button'
+          onClick={nextHandler}
+          className='next-button'
+        />
+        <div className='square-content'>
           <h1>Zero Sugar</h1>
           <p>
             Coca-Cola Zero Sugar
