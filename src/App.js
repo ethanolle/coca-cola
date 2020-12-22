@@ -1,10 +1,20 @@
-import "./App.css";
+import "./App.css"
 
 function App() {
   return (
     <div className='generalContainer'>
-      <div className='square'>
-        <div className='square-content'>
+      <img
+        src='images/cocalogo.svg'
+        alt='cocacola'
+        className='coca-logo center-page '
+      />
+      <img
+        src='images/products/Zero.png'
+        alt='cocacola'
+        className='products center-page '
+      />
+      <div className='square center-page '>
+        <div className='square-content   '>
           <h1>Zero Sugar</h1>
           <p>
             Coca-Cola Zero Sugar
@@ -14,7 +24,7 @@ function App() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
