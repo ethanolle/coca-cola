@@ -3,7 +3,6 @@ import React, { useState } from "react"
 
 function App() {
   const [transition, setTransition] = useState(false)
-  console.log(transition)
 
   return (
     <div className='generalContainer'>
@@ -13,7 +12,6 @@ function App() {
         className='coca-logo center-page '
       />
       <img
-        src='images/products/Zero.png'
         alt='cocacola'
         onAnimationEnd={() => {
           setTransition("right")
