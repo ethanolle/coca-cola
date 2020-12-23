@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/coca-cola/static/css/main.bd740bdc.chunk.css",
-    "main.js": "/coca-cola/static/js/main.dd255394.chunk.js",
-    "main.js.map": "/coca-cola/static/js/main.dd255394.chunk.js.map",
+    "main.css": "/coca-cola/static/css/main.ca41d49f.chunk.css",
+    "main.js": "/coca-cola/static/js/main.3fd9a945.chunk.js",
+    "main.js.map": "/coca-cola/static/js/main.3fd9a945.chunk.js.map",
     "runtime-main.js": "/coca-cola/static/js/runtime-main.c18f506e.js",
     "runtime-main.js.map": "/coca-cola/static/js/runtime-main.c18f506e.js.map",
     "static/js/2.4ba0d362.chunk.js": "/coca-cola/static/js/2.4ba0d362.chunk.js",
     "static/js/2.4ba0d362.chunk.js.map": "/coca-cola/static/js/2.4ba0d362.chunk.js.map",
     "index.html": "/coca-cola/index.html",
-    "static/css/main.bd740bdc.chunk.css.map": "/coca-cola/static/css/main.bd740bdc.chunk.css.map",
-    "static/js/2.4ba0d362.chunk.js.LICENSE.txt": "/coca-cola/static/js/2.4ba0d362.chunk.js.LICENSE.txt"
+    "static/css/main.ca41d49f.chunk.css.map": "/coca-cola/static/css/main.ca41d49f.chunk.css.map",
+    "static/js/2.4ba0d362.chunk.js.LICENSE.txt": "/coca-cola/static/js/2.4ba0d362.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/coca-cola/static/media/cocalogo.c77a8fad.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c18f506e.js",
     "static/js/2.4ba0d362.chunk.js",
-    "static/css/main.bd740bdc.chunk.css",
-    "static/js/main.dd255394.chunk.js"
+    "static/css/main.ca41d49f.chunk.css",
+    "static/js/main.3fd9a945.chunk.js"
   ]
 }
