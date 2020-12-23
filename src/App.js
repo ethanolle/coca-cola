@@ -22,11 +22,7 @@ function App() {
         src='/images/Zero.png'
       />
       <div className='square center-page '>
-        <img
-          src='images/Vector2.png'
-          alt='next-button'
-          className='next-container'
-        />
+        <img alt='next-button' className='next-container' />
         <h2 className='next-button' onClick={() => setTransition(true)}>
           Next
         </h2>
