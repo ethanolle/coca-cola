@@ -1,8 +1,8 @@
-import "./App.css"
-import React, { useState } from "react"
+import "./App.css";
+import React, { useState } from "react";
 
 function App() {
-  const [transition, setTransition] = useState(false)
+  const [transition, setTransition] = useState(false);
 
   return (
     <div className='generalContainer'>
@@ -14,11 +14,12 @@ function App() {
       <img
         alt='cocacola'
         onAnimationEnd={() => {
-          setTransition("right")
+          setTransition("right");
         }}
         className={
           transition === true ? "products slide-animation " : "products  "
         }
+        src='/images/Zero.png'
       />
       <div className='square center-page '>
         <img
@@ -39,7 +40,7 @@ function App() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
