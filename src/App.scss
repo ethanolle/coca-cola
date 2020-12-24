@@ -1,4 +1,4 @@
-$text-color: blue;
+@import "variables";
 
 body {
   background-color: #262626;
@@ -28,7 +28,7 @@ body {
 }
 .square {
   width: 50%;
-  background: linear-gradient(64.5deg, #292929 2.1%, #1c1c1c 100.55%);
+  background: $square-backround;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.25);
   border-radius: 60px;
   z-index: 1;
@@ -45,11 +45,10 @@ body {
   max-width: 100%;
   font-family: SF Pro Text;
   font-style: normal;
-  font-size: 1.2vw;
-  font-style: normal;
+  font-size: $square-font-size;
   bottom: 5%;
   left: 5%;
-  color:white;
+  color: $text-content-color;
 }
 
 .next-container {
@@ -66,7 +65,7 @@ body {
   bottom: 5%;
   right: 5%;
   font-size: 100%;
-  color: white;
+  color: $text-content-color;
 }
 .next-button:hover {
   cursor: pointer;
