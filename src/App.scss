@@ -19,48 +19,6 @@ body {
   z-index: 3;
 }
 
-@keyframes slide {
-  0% {
-    opacity: 100%;
-  }
-  49% {
-    opacity: 0%;
-    left: 0%;
-  }
-  50% {
-    opacity: 0%;
-    left: 100%;
-  }
-  100% {
-    opacity: 100%;
-    left: 50%;
-  }
-}
-
-.slide-animation {
-  animation: slide 1s;
-}
-
-.next-container {
-  content: url("images/Vector2.png");
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  max-width: 30%;
-}
-
-.next-button {
-  font-family: SF Pro Text;
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  font-size: 100%;
-  color: white;
-}
-.next-button:hover {
-  cursor: pointer;
-}
-
 .coca-logo {
   content: url(images/cocalogo.svg);
   width: 75%;
@@ -90,4 +48,47 @@ body {
   bottom: 5%;
   left: 5%;
   color: white;
+}
+
+.next-container {
+  content: url("images/Vector2.png");
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  max-width: 30%;
+}
+
+.next-button {
+  font-family: SF Pro Text;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 100%;
+  color: white;
+}
+.next-button:hover {
+  cursor: pointer;
+}
+/* Animations */
+
+@keyframes slide {
+  0% {
+    opacity: 100%;
+  }
+  49% {
+    opacity: 100%;
+    left: 0%;
+  }
+  50% {
+    opacity: 100%;
+    left: 100%;
+  }
+  100% {
+    opacity: 100%;
+    left: 50%;
+  }
+}
+
+.slide-animation {
+  animation: slide 1s;
 }

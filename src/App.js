@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import React, { useState } from "react";
 
 function App() {
@@ -6,11 +6,7 @@ function App() {
 
   return (
     <div className='generalContainer'>
-      <img
-        src='images/cocalogo.svg'
-        alt='cocacola'
-        className='coca-logo center-page '
-      />
+      <img alt='cocacola' className='coca-logo center-page ' />
       <img
         alt='cocacola'
         onAnimationEnd={() => {
