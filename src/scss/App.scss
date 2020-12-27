@@ -1,35 +1,30 @@
 @import "variables";
+@import "mixings";
 
 body {
   background-color: #262626;
 }
 
-.center-page {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 
 .products {
-  content: url("images/Zero.png");
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  content: url("../images/Zero.png");
+  @include centering-page;
   max-width: 15%;
   z-index: 3;
 }
 
 .coca-logo {
-  content: url(images/cocalogo.svg);
+  content: url(../images/cocalogo.svg);
+  @include centering-page;
   width: 75%;
   z-index: 2;
 }
 .square {
+  @include centering-page;
   width: 50%;
   background: $square-backround;
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: $square-box-shadow;
   border-radius: 60px;
   z-index: 1;
 }
@@ -49,10 +44,11 @@ body {
   bottom: 5%;
   left: 5%;
   color: $text-content-color;
+  // z-index: 6;
 }
 
 .next-container {
-  content: url("images/Vector2.png");
+  content: url("../images/Vector2.png");
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -70,26 +66,19 @@ body {
 .next-button:hover {
   cursor: pointer;
 }
-/* Animations */
 
-@keyframes slide {
-  0% {
-    opacity: 100%;
-  }
-  49% {
-    opacity: 0%;
-    left: 0%;
-  }
-  50% {
-    opacity: 0%;
-    left: 100%;
-  }
-  100% {
-    opacity: 100%;
-    left: 50%;
-  }
+@include animation-slide-left;
+
+.slide-animation-left {
+  animation: slide-left 1s;
 }
 
-.slide-animation {
-  animation: slide 1s;
+@include animation-slide-down;
+
+.slide-animation-down {
+  animation: slide-down 1s;
 }
+
+
+
+
