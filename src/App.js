@@ -1,9 +1,17 @@
-import "./scss/App.scss";
-import React, { useState } from "react";
-import info from "./const/coca_description.json";
-
+import "./scss/App.scss"
+import React, { useState } from "react"
+import info from "./const/coca_description.json"
 function App() {
-  const [transition, setTransition] = useState(false);
+  const [transition, setTransition] = useState(false)
+  const [infoproduct, setInfoproduct] = useState(0)
+
+  const handleClick = () => {
+    setTransition(true)
+    setTimeout(function () {
+      setInfoproduct(infoproduct + 1)
+      console.log(infoproduct)
+    }, 450)
+  }
 
   return (
     <div className='generalContainer'>
@@ -11,7 +19,7 @@ function App() {
       <img
         alt='cocacola'
         onAnimationEnd={() => {
-          setTransition("right");
+          setTransition("right")
         }}
         className={
           transition === true ? "products slide-animation-left " : "products  "
@@ -20,7 +28,7 @@ function App() {
       />
       <div className='square  '>
         <img alt='next-button' className='next-container' />
-        <h2 className='next-button' onClick={() => setTransition(true)}>
+        <h2 className='next-button' onClick={handleClick}>
           Next
         </h2>
         <div
@@ -30,16 +38,16 @@ function App() {
               : "square-content  "
           }
         >
-          <h1>{info.data[0].title}</h1>
+          <h1>{info.data[infoproduct].title}</h1>
           <p>
-            {info.data[0]["text-line1"]}
-            <br /> {info.data[0]["text-line2"]}
-            <br /> {info.data[0]["text-line3"]}
+            {info.data[infoproduct]["text-line1"]}
+            <br /> {info.data[infoproduct]["text-line2"]}
+            <br /> {info.data[infoproduct]["text-line3"]}
           </p>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
