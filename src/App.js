@@ -9,23 +9,25 @@ import Cherry from "./images/Cherry.png";
 function App() {
   const [transition, setTransition] = useState(false);
   const [bottle, setBottle] = useState(Zero);
-  const [infoproduct, setInfoproduct] = useState(0);
+  const [infoproduct, setInfoproduct] = useState(1);
   const bottlesList = [Zero, Vanilla, orangeVanilla, Cherry];
 
   const handleClick = async () => {
     setTransition(true);
-    setTimeout(
-      await function () {
+    setTimeout(function () {
+      if (infoproduct + 2 > info.data.length) {
+        setInfoproduct(0);
+        console.log(infoproduct);
+      } else {
         setInfoproduct(infoproduct + 1);
-        setBottle(bottlesList[infoproduct + 1]);
-        document.documentElement.style.setProperty(
-          "--my-variable-name",
-          `${info.data[infoproduct + 1]["backround-color"]}`
-        );
-      },
-      450
-    );
-    console.log(info.data[infoproduct]["backround-color"]);
+        console.log(infoproduct);
+      }
+      setBottle(bottlesList[infoproduct]);
+      document.documentElement.style.setProperty(
+        "--my-variable-name",
+        `${info.data[infoproduct]["backround-color"]}`
+      );
+    }, 450);
   };
 
   return (
