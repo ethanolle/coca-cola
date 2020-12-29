@@ -2,34 +2,38 @@
 "data": [
     {
       "id": 0,
-      "title": "test-title0",
-      "text-line1": "test00",
-      "text-line2": "test01",
-      "text-line3": "test02"
+      "backround-color":"linear-gradient(64.5deg, #292929 2.1%, #1C1C1C 100.55%)",
+      "title": "Zero Sugar",
+      "text-line1": "Coca-Cola Zero Sugar",
+      "text-line2": "Real Coke taste with zero",
+      "text-line3": "calories. It's possible!"
       
     },    
     {
       "id": 1,
-      "title": "test-title1",
-      "text-line1": "test1",
-      "text-line2": "test1",
-      "text-line3": "test1"
+      "backround-color":"linear-gradient(66.37deg, #ECE1C9 2.16%, #9F8C5C 103.37%)"  , 
+      "title": "Vanilla",
+      "text-line1": "Great taste of Coca-Cola",
+      "text-line2": "with refreshingly smooth",
+      "text-line3": "balance of vanilla flavor."
       
     },    
     {
         "id": 2,
-        "title": "test-title2",
-        "text-line1": "test2",
-        "text-line2": "test2",
-        "text-line3": "test2"
+        "backround-color":"linear-gradient(66.37deg, #F0AE54 2.16%, #8B481E 103.37%)",
+        "title": "Orange Vanilla",
+        "text-line1": "Newest flavor to join the",
+        "text-line2": "Coke family with a new",
+        "text-line3": "wist on delicious."
         
       },
       {
         "id": 3,
-        "title": "test-title3",
-        "text-line1": "test3",
-        "text-line2": "test3",
-        "text-line3": "test3"
+        "backround-color":"linear-gradient(66.37deg, #8F355A 2.16%, #5E2438 41.61%, #2C1316 103.37%)",
+        "title": "Cherry ",
+        "text-line1": "Great taste of Coca-Cola",
+        "text-line2": "with a sweet, smooth",
+        "text-line3": " cherry flavor."
         
       }
       

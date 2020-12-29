@@ -1,17 +1,32 @@
-import "./scss/App.scss"
-import React, { useState } from "react"
-import info from "./const/coca_description.json"
-function App() {
-  const [transition, setTransition] = useState(false)
-  const [infoproduct, setInfoproduct] = useState(0)
+import "./scss/App.scss";
+import React, { useState } from "react";
+import info from "./const/coca_description.json";
+import Zero from "./images/Zero.png";
+import Vanilla from "./images/Vanilla.png";
+import orangeVanilla from "./images/orangeVanilla.png";
+import Cherry from "./images/Cherry.png";
 
-  const handleClick = () => {
-    setTransition(true)
-    setTimeout(function () {
-      setInfoproduct(infoproduct + 1)
-      console.log(infoproduct)
-    }, 450)
-  }
+function App() {
+  const [transition, setTransition] = useState(false);
+  const [bottle, setBottle] = useState(Zero);
+  const [infoproduct, setInfoproduct] = useState(0);
+  const bottlesList = [Zero, Vanilla, orangeVanilla, Cherry];
+
+  const handleClick = async () => {
+    setTransition(true);
+    setTimeout(
+      await function () {
+        setInfoproduct(infoproduct + 1);
+        setBottle(bottlesList[infoproduct + 1]);
+        document.documentElement.style.setProperty(
+          "--my-variable-name",
+          `${info.data[infoproduct + 1]["backround-color"]}`
+        );
+      },
+      450
+    );
+    console.log(info.data[infoproduct]["backround-color"]);
+  };
 
   return (
     <div className='generalContainer'>
@@ -19,12 +34,12 @@ function App() {
       <img
         alt='cocacola'
         onAnimationEnd={() => {
-          setTransition("right")
+          setTransition("right");
         }}
         className={
           transition === true ? "products slide-animation-left " : "products  "
         }
-        src='/images/Zero.png'
+        src={bottle}
       />
       <div className='square  '>
         <img alt='next-button' className='next-container' />
@@ -47,7 +62,7 @@ function App() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
