@@ -9,7 +9,10 @@ import Cherry from "./images/Cherry.png";
 function App() {
   const [transition, setTransition] = useState(false);
   const [bottle, setBottle] = useState(Zero);
-  const [infoproduct, setInfoproduct] = useState(1);
+  const [backroundcolor, setBackroundcolor] = useState(
+    "linear-gradient(64.5deg, #292929 2.1%, #1C1C1C 100.55%)"
+  );
+  const [infoproduct, setInfoproduct] = useState(0);
   const bottlesList = [Zero, Vanilla, orangeVanilla, Cherry];
 
   const handleClick = async () => {
@@ -17,19 +20,18 @@ function App() {
     setTimeout(function () {
       if (infoproduct + 2 > info.data.length) {
         setInfoproduct(0);
-        console.log(infoproduct);
       } else {
         setInfoproduct(infoproduct + 1);
-        console.log(infoproduct);
       }
+      setBackroundcolor(info.data[infoproduct]["backround-color"]);
+      console.log(infoproduct, backroundcolor);
       setBottle(bottlesList[infoproduct]);
       document.documentElement.style.setProperty(
         "--my-variable-name",
-        `${info.data[infoproduct]["backround-color"]}`
+        `${backroundcolor}`
       );
     }, 450);
   };
-
   return (
     <div className='generalContainer'>
       <img alt='cocacola' className='coca-logo  ' />
