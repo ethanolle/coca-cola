@@ -1,12 +1,13 @@
 @import "variables";
 @import "mixings";
 
+
 body {
   background-color: #262626;
 }
 
 .products {
-  content: url("../images/Zero.png");
+  // content: url("../images/Zero.png");
   @include centering-page;
   max-width: 15%;
   z-index: 3;
@@ -21,7 +22,7 @@ body {
 .square {
   @include centering-page;
   width: 50%;
-  background: $square-backround;
+  background:$square-backround;
   box-shadow: $square-box-shadow;
   border-radius: 60px;
   z-index: 1;
