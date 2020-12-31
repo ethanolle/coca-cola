@@ -5,8 +5,6 @@ body {
   background-color: #262626;
 }
 
-
-
 .products {
   content: url("../images/Zero.png");
   @include centering-page;
@@ -15,7 +13,7 @@ body {
 }
 
 .coca-logo {
-  content: url(../images/cocalogo.svg);
+  content: url("../images/cocalogo.svg");
   @include centering-page;
   width: 75%;
   z-index: 2;
@@ -78,7 +76,3 @@ body {
 .slide-animation-down {
   animation: slide-down 1s;
 }
-
-
-
-
