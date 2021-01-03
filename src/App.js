@@ -1,5 +1,5 @@
 import "./scss/App.scss";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import info from "./const/coca_description.json";
 import Zero from "./images/Zero.png";
 import Vanilla from "./images/Vanilla.png";
@@ -15,22 +15,26 @@ function App() {
   const [infoproduct, setInfoproduct] = useState(0);
   const bottlesList = [Zero, Vanilla, orangeVanilla, Cherry];
 
+  useEffect(() => {
+    console.log(infoproduct);
+  }, [infoproduct]);
+
   const handleClick = async () => {
     setTransition(true);
-    setTimeout(function () {
+    await setTimeout(function () {
       if (infoproduct + 2 > info.data.length) {
         setInfoproduct(0);
       } else {
         setInfoproduct(infoproduct + 1);
       }
-      setBackroundcolor(info.data[infoproduct]["backround-color"]);
-      console.log(infoproduct, backroundcolor);
       setBottle(bottlesList[infoproduct]);
       document.documentElement.style.setProperty(
         "--my-variable-name",
-        `${backroundcolor}`
+        `${info.data[infoproduct]["backround-color"]}`
       );
     }, 450);
+
+    // setBackroundcolor(info.data[infoproduct]["backround-color"]);
   };
   return (
     <div className='generalContainer'>
