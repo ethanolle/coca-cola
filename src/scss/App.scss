@@ -1,7 +1,6 @@
 @import "variables";
 @import "mixings";
 
-
 body {
   background-color: #262626;
 }
@@ -22,7 +21,7 @@ body {
 .square {
   @include centering-page;
   width: 50%;
-  background:$square-backround;
+  background: $square-backround;
   box-shadow: $square-box-shadow;
   border-radius: 60px;
   z-index: 1;
@@ -59,7 +58,8 @@ body {
   position: absolute;
   bottom: 5%;
   right: 5%;
-  font-size: 100%;
+
+  font-size: 2vw;
   color: $text-content-color;
 }
 .next-button:hover {
