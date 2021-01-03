@@ -1,35 +1,37 @@
 import "./scss/App.scss";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import info from "./const/coca_description.json";
-import Zero from "./images/Zero.png";
-import Vanilla from "./images/Vanilla.png";
-import orangeVanilla from "./images/orangeVanilla.png";
-import Cherry from "./images/Cherry.png";
+import { bottlesList } from "./const/cocaData";
 
 function App() {
   const [transition, setTransition] = useState(false);
-  const [bottle, setBottle] = useState(Zero);
+  const [bottle, setBottle] = useState(bottlesList[0]);
   const [backroundcolor, setBackroundcolor] = useState(
     "linear-gradient(64.5deg, #292929 2.1%, #1C1C1C 100.55%)"
   );
   const [infoproduct, setInfoproduct] = useState(0);
-  const bottlesList = [Zero, Vanilla, orangeVanilla, Cherry];
+
+  useEffect(() => {
+    setBottle(bottlesList[infoproduct]);
+    setBackroundcolor(info.data[infoproduct]["backround-color"]);
+  }, [infoproduct]);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--my-variable-name",
+      `${backroundcolor}`
+    );
+  }, [backroundcolor]);
 
   const handleClick = async () => {
+    console.log(backroundcolor);
     setTransition(true);
-    setTimeout(function () {
+    await setTimeout(function () {
       if (infoproduct + 2 > info.data.length) {
         setInfoproduct(0);
       } else {
         setInfoproduct(infoproduct + 1);
       }
-      setBackroundcolor(info.data[infoproduct]["backround-color"]);
-      console.log(infoproduct, backroundcolor);
-      setBottle(bottlesList[infoproduct]);
-      document.documentElement.style.setProperty(
-        "--my-variable-name",
-        `${backroundcolor}`
-      );
     }, 450);
   };
   return (
