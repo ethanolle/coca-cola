@@ -40,18 +40,18 @@
 @mixin animation-slide-left {
   @keyframes slide-left {
     0% {
-      opacity: 100%;
+      opacity: 1;
     }
     49% {
-      opacity: 0%;
+      opacity: 0;
       left: 0%;
     }
     50% {
-      opacity: 0%;
+      opacity: 0;
       left: 100%;
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
       left: 50%;
     }
   }
@@ -60,18 +60,18 @@
 @mixin animation-slide-down {
   @keyframes slide-down {
     0% {
-      opacity: 100%;
+      opacity: 1;
     }
     49% {
-      opacity: 0%;
+      opacity: 0;
       bottom: -10%;
     }
     50% {
-      opacity: 100%;
+      opacity: 1;
       bottom: 10%;
     }
     100% {
-      opacity: 100%;
+      opacity: 1;
     }
   }
 }
